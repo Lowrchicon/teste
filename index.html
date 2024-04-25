@@ -1,7 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <style>
+        body, ::backdrop {
+            background: #fff;
+        }
+        #fullscreen-button {
+            position: absolute;
+            top:  15px;
+            right:  15px;
+            background: rgba(0,0,0,0.05);
+            border:  0;
+            width:  40px;
+            height:  40px;
+            border-radius: 50%;
+            box-sizing: border-box;
+            transition:  transform .3s;
+            cursor:  pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #fullscreen-button:hover {
+            transform: scale(1.125);
+        }
+        #fullscreen-button svg:nth-child(2) { 
+            display: none;
+        }
+        [fullscreen] #fullscreen-button svg:nth-child(1) {
+            display: none;
+        }
+        [fullscreen] #fullscreen-button svg:nth-child(2) {
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
 
@@ -9,6 +41,8 @@
     <div class="center">
         <div class="rotation">
             <img src="images/360/01.png">
+           
+<img src="images/360/01.png">
             <img src="images/360/02.png">
             <img src="images/360/03.png">
             <img src="images/360/04.png">
@@ -54,11 +88,12 @@
             <img src="images/360/44.png">
             <img src="images/360/45.png">
             <img src="images/360/46.png">
+ 
         </div>
     </div>
 </div>
 
 <script src="js/360deg.js"></script>
-    <script src="css/styles.css"></script>
 </body>
 </html>
+
